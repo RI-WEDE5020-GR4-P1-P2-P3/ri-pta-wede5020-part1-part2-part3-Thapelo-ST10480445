@@ -14,11 +14,263 @@
 </head>
 <body>
 
-    <!-- HEADER: Navigation Menu -->
+    
+    <!-- HEADER: Navigation Menu   -->
+    
     <header>
         <div class="container">
             <div class="logo">
                 <a href="index.html">
                     <svg width="42" height="42" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <rect width="100" height="100" rx="20" fill="#1A252F"/>
-                        <text x="50" y="40" font-family="Montserrat, sans-serif
+                        <text x="50" y="40" font-family="Montserrat, sans-serif" font-size="20" font-weight="bold" fill="#40E0D0" text-anchor="middle">H</text>
+                        <text x="50" y="62" font-family="Montserrat, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">FOOD</text>
+                        <text x="50" y="78" font-family="Montserrat, sans-serif" font-size="8" font-weight="400" fill="#7FFFD4" text-anchor="middle" opacity="0.7">BANK</text>
+                        <circle cx="72" cy="22" r="8" fill="#40E0D0" opacity="0.3"/>
+                        <text x="72" y="27" font-size="10" text-anchor="middle">🍲</text>
+                    </svg>
+                    <div class="logo-text">
+                        <span class="logo-title">Haven</span>
+                        <span class="logo-sub">Food Bank</span>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="enquiry.html">Volunteer</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="btn-donate">
+                    <i class="fas fa-heart"></i> <span>Donate</span>
+                </a>
+                <button class="menu-toggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT   -->
+    
+    <main>
+
+     
+        
+        <section class="page-header" style="background: linear-gradient(rgba(26,37,47,0.7), rgba(26,37,47,0.8)), url('https://images.pexels.com/photos/6646960/pexels-photo-6646960.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;">
+            <div class="container">
+                <h1>Find Food Near You</h1>
+                <p>We're here to help. Access nutritious food with dignity.</p>
+            </div>
+        </section>
+
+        
+        <!-- ELIGIBILITY INFORMATION   -->
+        
+        <section class="eligibility">
+            <div class="container">
+                <h2>Who Can Receive Food Assistance?</h2>
+                <p>Haven Community Food Bank serves the following community members:</p>
+                <ul>
+                    <li>Low-income families</li>
+                    <li>Elderly residents (65+)</li>
+                    <li>Persons with disabilities</li>
+                    <li>Unemployed individuals</li>
+                </ul>
+                <div class="notice">
+                    <p><strong>⚠️ Please bring an ID document for registration.</strong></p>
+                    <p>No appointment is needed. Just visit during distribution hours.</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- DISTRIBUTION SCHEDULE  -->
+     
+        <section class="schedule">
+            <div class="container">
+                <h2>Weekly Distribution Schedule</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Time</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Monday</strong></td>
+                                <td>10am – 2pm</td>
+                                <td>Philippi Hub</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tuesday</strong></td>
+                                <td>11am – 3pm</td>
+                                <td>Khayelitsha</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Wednesday</strong></td>
+                                <td>9am – 1pm</td>
+                                <td>Mitchells Plain</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thursday</strong></td>
+                                <td>12pm – 4pm</td>
+                                <td>Philippi Hub</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Friday</strong></td>
+                                <td>10am – 2pm</td>
+                                <td>Khayelitsha</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Saturday</strong></td>
+                                <td>8am – 12pm</td>
+                                <td>Philippi Hub</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+       
+        <!-- LOCATION CARDS                                               -->
+        
+        <section class="locations">
+            <div class="container">
+                <h2>Distribution Locations</h2>
+                <div class="location-grid">
+                    <article class="location-card">
+                        <img src="https://images.pexels.com/photos/1462947/pexels-photo-1462947.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Philippi Hub - Community food distribution centre" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:15px;">
+                        <i class="fas fa-map-marker-alt location-icon"></i>
+                        <h3>Philippi Hub</h3>
+                        <p><strong>Address:</strong> 123 Main Rd, Philippi, 7785</p>
+                        <p><strong>Hours:</strong> Mon, Wed, Sat (10am-2pm)</p>
+                        <p><strong>Contact:</strong> Nomsa (021) 123-4567</p>
+                    </article>
+                    <article class="location-card">
+                        <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Khayelitsha Satellite - Community food distribution centre" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:15px;">
+                        <i class="fas fa-map-marker-alt location-icon"></i>
+                        <h3>Khayelitsha Satellite</h3>
+                        <p><strong>Address:</strong> 45 Mandela Ave, Khayelitsha, 7784</p>
+                        <p><strong>Hours:</strong> Tue, Fri (11am-3pm)</p>
+                        <p><strong>Contact:</strong> Peter (021) 123-4568</p>
+                    </article>
+                    <article class="location-card">
+                        <img src="https://images.pexels.com/photos/1462947/pexels-photo-1462947.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mitchells Plain Satellite - Community food distribution centre" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:15px;">
+                        <i class="fas fa-map-marker-alt location-icon"></i>
+                        <h3>Mitchells Plain Satellite</h3>
+                        <p><strong>Address:</strong> 78 Second Ave, Mitchells Plain, 7785</p>
+                        <p><strong>Hours:</strong> Wed, Thu (9am-1pm)</p>
+                        <p><strong>Contact:</strong> Thandi (021) 123-4569</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- MAP PLACEHOLDER (Interactive Map will be added in Part 3)   -->
+    
+        <section class="map-section">
+            <div class="container">
+                <h2>Find Us on the Map</h2>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p><strong>Distribution Locations:</strong></p>
+                    <ul>
+                        <li> Philippi Hub – 123 Main Rd, Philippi, 7785</li>
+                        <li> Khayelitsha – 45 Mandela Ave, Khayelitsha, 7784</li>
+                        <li> Mitchells Plain – 78 Second Ave, Mitchells Plain, 7785</li>
+                    </ul>
+                    <p class="map-note"><em>Interactive map will be added in Part 3.</em></p>
+                </div>
+            </div>
+        </section>
+
+      
+        <!-- FREQUENTLY ASKED QUESTIONS   -->
+       
+        <section class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>What should I bring?</h3>
+                        <p>Please bring your ID document for registration purposes.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do I need an appointment?</h3>
+                        <p>No appointment is needed. Just visit during distribution hours.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I pick up for someone else?</h3>
+                        <p>Yes, please bring their ID document and a note of authorisation.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What food items are available?</h3>
+                        <p>We provide nutritious groceries including fresh produce, non-perishable items, and hot meals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER      -->
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Haven Community Food Bank</h4>
+                    <p>Nourishing our neighbours with dignity since 2015.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Get Help</a></li>
+                        <li><a href="enquiry.html">Volunteer</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Rd, Philippi, 7785</li>
+                        <li><i class="fas fa-phone"></i> (021) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@havenfoodbank.org</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Haven Community Food Bank. All Rights Reserved.</p>
+                <p>Created for Web Development (WEDE5020) PoE</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
