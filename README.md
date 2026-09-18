@@ -11,7 +11,7 @@
 **Subject:** Web Development (WEDE5020)
 **Programme:** Diploma in Information Technology – Software Development
 **Group:** 4
-**Date:** 14 August 2026
+**Date:** 14 August 2026 (last updated 18 September 2026)
 
 ---
 
@@ -31,7 +31,7 @@ This is a three-part assignment, built step by step:
 
 **Part 1 – Planning:** proposals, design, sitemap. *Status: Done*
 **Part 2 – Build:** the HTML and CSS (structure and styling). *Status: Done*
-**Part 3 – Interactivity:** JavaScript for forms, maps, etc. *Status: Not yet started*
+**Part 3 – Interactivity:** JavaScript for forms, maps, etc. *Status: In Progress — mobile navigation, interactive map, and form validation are working; see Changelog below*
 
 ---
 
@@ -60,16 +60,20 @@ I've built 5 main pages (the minimum required):
 
 **Homepage** (`index.html`) – the landing page with the hero section, stats, and a preview of what's coming up
 **About Us** (`about.html`) – the organisation's story, team members, and what they stand for
-**Get Help** (`services.html`) – where to go, when, and what to bring to get food assistance
+**Get Help** (`services.html`) – eligibility, distribution schedule, locations, and an FAQ section
 **Volunteer** (`enquiry.html`) – a form where people can sign up to help out
-**Contact** (`contact.html`) – how to get in touch and where to find them
+**Contact** (`contact.html`) – how to get in touch, an interactive map, and where to find them
 
 ### Features
 
 **Mobile-friendly design** – everything works on phones first, then scales up
-**Accessibility features** – high contrast, keyboard navigation, alt text on images
-**Interactive map** – shows all distribution locations (coming in Part 3)
-**Form validation** – makes sure people fill out forms correctly (coming in Part 3)
+**Modern visual design** – a warm, distinct colour system (coral, deep indigo, soft periwinkle) with a bento-style card layout, glass-effect header, and gradient accents, rather than a generic template look
+**Accessibility features** – high contrast, keyboard navigation, visible focus states, alt text on images
+**Functional mobile menu** – the hamburger icon now actually opens/closes navigation on small screens
+**Interactive map** – a real Leaflet.js map on the Contact page with clickable pins for all three distribution points, popups with hours/contact info, and "Get Directions" links
+**Form validation** – the Contact and Volunteer forms validate required fields, email format, and (for the volunteer form) that at least one availability day is checked, with inline error messages and a success confirmation
+**Newsletter signup feedback** – the footer subscribe form confirms submission client-side
+**Back-to-top button** – appears after scrolling and smooth-scrolls back to the top
 **Clear navigation** – the menu is consistent across all pages
 **Donate button** – stands out to encourage giving
 **Social media links** – connects to Facebook, Instagram, Twitter, and LinkedIn
@@ -80,8 +84,9 @@ I've built 5 main pages (the minimum required):
 
 **HTML5** – page structure; it's the standard and has good accessibility features
 **CSS3** – styling and layout; Flexbox and Grid make responsive design easier
-**JavaScript (Vanilla)** – interactivity; no dependencies, fast loading, full control
+**JavaScript (Vanilla)** – interactivity: mobile nav toggle, form validation, newsletter feedback, back-to-top
 **Leaflet.js** – interactive maps; free, open-source, doesn't track users
+**CARTO basemap tiles** – map tile provider (see Changelog: switched from raw OpenStreetMap tile servers, which actively block unregistered app traffic per their usage policy)
 **Font Awesome** – icons; free icons that look professional
 **Google Fonts** – typography; Montserrat and Open Sans are clean and readable
 **Netlify** – hosting; free tier is generous, has HTTPS and fast delivery
@@ -91,21 +96,23 @@ I've built 5 main pages (the minimum required):
 
 ## File and Folder Structure
 
-
+```
 haven-site/
-index.html
-about.html
-services.html
-enquiry.html
-contact.html
-css/
-   style.css
-js/          (to be added in Part 3)
-images/      (local images, if/when added)
+  index.html
+  about.html
+  services.html
+  enquiry.html
+  contact.html
+  css/
+    style.css
+  js/
+    main.js
+  images/      (local images, if/when added)
+```
 
 - All pages share the same header, navigation, and footer for consistency
 - All styling lives in one stylesheet (`css/style.css`) so the look stays consistent across pages
-- JavaScript will be added in `js/` during Part 3 for form validation and the interactive map
+- All interactivity lives in one script (`js/main.js`), loaded on every page — it checks for each feature's elements before running, so one shared file safely covers all five pages
 
 
 
@@ -118,7 +125,7 @@ images/      (local images, if/when added)
 - **2026** – Now serving 400+ families monthly with groceries and 600+ hot meals
 - **Part 1 (Done)** – Planning, proposal, sitemap, wireframes
 - **Part 2 (Done)** – HTML structure and CSS styling for all 5 pages
-- **Part 3 (Upcoming)** – JavaScript: form validation, interactive map, any dynamic features
+- **Part 3 (In Progress)** – JavaScript: mobile navigation, interactive map, and form validation are done; still to come: any remaining dynamic features
 
 
 
@@ -139,11 +146,50 @@ Part 1 covered the planning phase: the website project proposal, defining the sc
 - **Volunteer** (`enquiry.html`)
   - Volunteer Roles, Testimonials, Sign-Up Form
 - **Contact** (`contact.html`)
-  - Contact Details, Enquiry Form, Locations, Social Links
+  - Contact Details, Enquiry Form, Interactive Map, Locations, Social Links
 
 All pages are reachable from every other page via the main navigation menu and the footer quick links.
 
 
+### Part 2 Details
+### Features
+
+**Mobile-friendly design** – everything works on phones first, then scales up
+**Accessibility features** – high contrast, keyboard navigation, alt text on images
+**Interactive map** – shows all distribution locations using Leaflet.js
+**Form validation** – client-side JavaScript ensures people fill out forms correctly
+**Clear navigation** – the menu is consistent across all pages, with a mobile toggle
+**Donate button** – stands out to encourage giving
+**Social media links** – connects to Facebook, Instagram, Twitter, and LinkedIn
+
+## Tech Stack
+
+**HTML5** – page structure; it's the standard and has good accessibility features
+**CSS3** – styling and layout; Flexbox, Grid, and CSS Variables make responsive design easier
+**JavaScript (Vanilla)** – interactivity; form validation, mobile menu, and dynamic elements
+**Leaflet.js** – interactive maps; free, open-source, doesn't track users
+**Font Awesome** – icons; free icons that look professional
+**Google Fonts** – typography; Montserrat and Open Sans are clean and readable
+**Netlify** – hosting; free tier is generous, has HTTPS and fast delivery
+**Git & GitHub** – version control; standard for tracking changes
+
+## File and Folder Structure
+
+haven-site/
+├── index.html
+├── about.html
+├── services.html
+├── enquiry.html
+├── contact.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js  (Part 3: Form validation, mobile menu, Leaflet.js map)
+└── images/      (local images, if/when added)
+
+- All pages share the same header, navigation, and footer for consistency
+- All styling lives in one stylesheet (`css/style.css`) so the look stays consistent across pages
+- JavaScript handles all interactivity in `js/main.js` (Part 3)
 
 ## Changelog
 
@@ -152,6 +198,18 @@ All pages are reachable from every other page via the main navigation menu and t
 - **14 August 2026** – Fixed mismatched names/alt text and duplicate photos in the About page team section
 - **14 August 2026** – Reorganised project into proper folder structure (`css/` folder for stylesheet)
 - **14 August 2026** – Cleaned up inconsistent spacing/comment formatting on the homepage
+- **18 September 2026** – Redesigned the colour palette and layout for a more modern look: moved from the original navy/turquoise theme to a warm coral-red, deep indigo, and soft periwinkle palette, with pill-shaped buttons, a glass-effect sticky header, gradient accents, bento-style card grids, and a fluid typography scale
+- **18 September 2026** – Confirmed `homepage.html` was still present under its old filename despite the earlier changelog entry; actually renamed it to `index.html` so it matches the internal links across every page
+- **18 September 2026** – Re-fixed the distribution-time en-dashes on the homepage, which had regressed back to plain double spaces (`10am  2pm` → `10am – 2pm`)
+- **18 September 2026** – Rebuilt `services.html` from scratch: the uploaded file was corrupted/truncated at 1.4KB. Reconstructed it against the sitemap (Eligibility, Distribution Schedule table, Locations, FAQ) in the new design system
+- **18 September 2026** – Added `js/main.js` for Part 3 interactivity:
+  - Functional mobile navigation toggle (hamburger menu now opens/closes on small screens)
+  - Interactive Leaflet.js map on the Contact page with pins, popups, and directions links for all three distribution points
+  - Client-side validation and success/error feedback for the Contact and Volunteer forms
+  - Newsletter signup confirmation in the footer
+  - Back-to-top button
+- **18 September 2026** – Replaced the placeholder address (`123 Main Rd, Philippi, 7785`) across all five pages, the footer, the map data, and the directions links with a realistic Philippi address: `24 Old Lansdowne Road, Philippi, 7781`
+- **18 September 2026** – Fixed a `403 Access blocked` error from the interactive map: the raw OpenStreetMap tile servers (`tile.openstreetmap.org`) actively reject traffic that doesn't meet their tile usage policy. Switched the Leaflet tile layer to CARTO's free basemap tiles, which permit this kind of use without an API key
 - *(Further changes will be logged here as Part 3 progresses)*
 
 
@@ -163,3 +221,6 @@ All pages are reachable from every other page via the main navigation menu and t
 - Pexels. (2024). *Free Stock Photos*. Available at: https://www.pexels.com/ [Accessed 14 August 2026].
 - Mozilla Developer Network. (2024). *HTML: HyperText Markup Language*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML [Accessed 14 August 2026].
 - Mozilla Developer Network. (2024). *CSS: Cascading Style Sheets*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS [Accessed 14 August 2026].
+- Leaflet. (2024). *Leaflet – an open-source JavaScript library for interactive maps*. Available at: https://leafletjs.com/ [Accessed 18 September 2026].
+- CARTO. (2024). *Basemaps*. Available at: https://carto.com/basemaps [Accessed 18 September 2026].
+- OpenStreetMap Foundation. (2024). *Tile Usage Policy*. Available at: https://operations.osmfoundation.org/policies/tiles/ [Accessed 18 September 2026].
