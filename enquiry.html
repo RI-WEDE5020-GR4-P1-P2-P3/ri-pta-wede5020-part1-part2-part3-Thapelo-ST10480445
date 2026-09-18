@@ -46,7 +46,7 @@
                 <a href="contact.html" class="btn-donate">
                     <i class="fas fa-heart"></i> <span>Donate</span>
                 </a>
-                <button class="menu-toggle" aria-label="Toggle Navigation">
+                <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -57,7 +57,7 @@
     <main>
 
         <!-- PAGE HEADER -->
-        <section class="page-header" style="background: linear-gradient(rgba(26,37,47,0.7), rgba(26,37,47,0.8)), url('https://images.pexels.com/photos/6646865/pexels-photo-6646865.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;">
+        <section class="page-header" style="background: linear-gradient(rgba(27,26,46,0.7), rgba(46,43,95,0.82)), url('https://images.pexels.com/photos/6646865/pexels-photo-6646865.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;">
             <div class="container">
                 <h1>Become a Volunteer</h1>
                 <p>Make a difference in your community</p>
@@ -67,7 +67,10 @@
         <!-- VOLUNTEER ROLES -->
         <section class="roles">
             <div class="container">
-                <h2>Volunteer Roles</h2>
+                <div class="section-header">
+                    <span class="section-tag">Get Involved</span>
+                    <h2>Volunteer Roles</h2>
+                </div>
                 <div class="roles-grid">
                     <div class="role-card">
                         <i class="fas fa-boxes"></i>
@@ -100,7 +103,10 @@
         <!-- VOLUNTEER TESTIMONIALS -->
         <section class="testimonials">
             <div class="container">
-                <h2>What Our Volunteers Say</h2>
+                <div class="section-header">
+                    <span class="section-tag">Voices</span>
+                    <h2>What Our Volunteers Say</h2>
+                </div>
                 <div class="testimonial-grid">
                     <blockquote>
                         <p>"Volunteering at Haven is the best decision I made. I've met amazing people and made a real impact in my community."</p>
@@ -117,10 +123,13 @@
         <!-- VOLUNTEER SIGN-UP FORM -->
         <section class="signup-section">
             <div class="container">
-                <h2>Join Our Volunteer Team</h2>
+                <div class="section-header">
+                    <span class="section-tag">Sign Up</span>
+                    <h2>Join Our Volunteer Team</h2>
+                </div>
 
                 <!-- Volunteer Form -->
-                <form id="volunteerForm">
+                <form id="volunteerForm" novalidate>
 
                     <!-- Personal Information -->
                     <fieldset>
@@ -199,7 +208,6 @@
                     </div>
 
                     <p class="form-note">* Required fields</p>
-                    <p class="form-note"><em>Note: Form validation will be added in Part 3.</em></p>
                 </form>
             </div>
         </section>
@@ -253,5 +261,8 @@
         </div>
     </footer>
 
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

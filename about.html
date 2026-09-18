@@ -25,7 +25,7 @@
                         <text x="50" y="62" font-family="Montserrat, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">FOOD</text>
                         <text x="50" y="78" font-family="Montserrat, sans-serif" font-size="8" font-weight="400" fill="#7FFFD4" text-anchor="middle" opacity="0.7">BANK</text>
                         <circle cx="72" cy="22" r="8" fill="#40E0D0" opacity="0.3"/>
-                        <text x="72" y="27" font-size="10" text-anchor="middle"></text>
+                        <text x="72" y="27" font-size="10" text-anchor="middle">🍲</text>
                     </svg>
                     <div class="logo-text">
                         <span class="logo-title">Haven</span>
@@ -46,7 +46,7 @@
                 <a href="contact.html" class="btn-donate">
                     <i class="fas fa-heart"></i> <span>Donate</span>
                 </a>
-                <button class="menu-toggle" aria-label="Toggle Navigation">
+                <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -57,7 +57,7 @@
     <main>
 
         <!-- PAGE HEADER -->
-        <section class="page-header" style="background: linear-gradient(rgba(26,37,47,0.7), rgba(26,37,47,0.8)), url('https://images.pexels.com/photos/6646864/pexels-photo-6646864.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;">
+        <section class="page-header" style="background: linear-gradient(rgba(27,26,46,0.7), rgba(46,43,95,0.82)), url('https://images.pexels.com/photos/6646864/pexels-photo-6646864.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;">
             <div class="container">
                 <h1>About Haven Community Food Bank</h1>
                 <p>Nourishing our neighbours since 2015</p>
@@ -114,7 +114,10 @@
         <!-- OUR VALUES -->
         <section class="values">
             <div class="container">
-                <h2>Our Values</h2>
+                <div class="section-header">
+                    <span class="section-tag">What Drives Us</span>
+                    <h2>Our Values</h2>
+                </div>
                 <div class="values-grid">
                     <div class="value-card">
                         <i class="fas fa-hand-holding-heart"></i>
@@ -143,7 +146,10 @@
         <!-- OUR TEAM -->
         <section class="team">
             <div class="container">
-                <h2>Our Team</h2>
+                <div class="section-header">
+                    <span class="section-tag">Meet The Team</span>
+                    <h2>Our Team</h2>
+                </div>
                 <div class="team-grid">
                     <article class="team-member">
                         <img src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Nomsa M. - Director">
@@ -176,7 +182,10 @@
         <!-- IMPACT NUMBERS -->
         <section class="impact">
             <div class="container">
-                <h2>Our Impact</h2>
+                <div class="section-header">
+                    <span class="section-tag">By The Numbers</span>
+                    <h2>Our Impact</h2>
+                </div>
                 <div class="impact-grid">
                     <div class="impact-card">
                         <span class="impact-number">400+</span>
@@ -201,7 +210,10 @@
         <!-- TESTIMONIALS -->
         <section class="testimonials">
             <div class="container">
-                <h2>What People Say</h2>
+                <div class="section-header">
+                    <span class="section-tag">Voices</span>
+                    <h2>What People Say</h2>
+                </div>
                 <div class="testimonial-grid">
                     <blockquote>
                         <p>"Haven gave us hope when we had nothing. The team treated us with dignity and respect."</p>
@@ -268,5 +280,8 @@
         </div>
     </footer>
 
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

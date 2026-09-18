@@ -10,6 +10,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,7 +26,7 @@
                         <text x="50" y="62" font-family="Montserrat, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">FOOD</text>
                         <text x="50" y="78" font-family="Montserrat, sans-serif" font-size="8" font-weight="400" fill="#7FFFD4" text-anchor="middle" opacity="0.7">BANK</text>
                         <circle cx="72" cy="22" r="8" fill="#40E0D0" opacity="0.3"/>
-                        <text x="72" y="27" font-size="10" text-anchor="middle">🍲</text>
+                        <text x="72" y="27" font-size="10" text-anchor="middle"></text>
                     </svg>
                     <div class="logo-text">
                         <span class="logo-title">Haven</span>
@@ -46,7 +47,7 @@
                 <a href="contact.html" class="btn-donate">
                     <i class="fas fa-heart"></i> <span>Donate</span>
                 </a>
-                <button class="menu-toggle" aria-label="Toggle Navigation">
+                <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -57,7 +58,7 @@
     <main>
 
         <!-- PAGE HEADER -->
-        <section class="page-header" style="background: linear-gradient(rgba(26,37,47,0.7), rgba(26,37,47,0.8)), url('https://images.pexels.com/photos/6646962/pexels-photo-6646962.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;">
+        <section class="page-header" style="background: linear-gradient(rgba(27,26,46,0.7), rgba(46,43,95,0.82)), url('https://images.pexels.com/photos/6646962/pexels-photo-6646962.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;">
             <div class="container">
                 <h1>Contact Us</h1>
                 <p>We'd love to hear from you</p>
@@ -72,7 +73,7 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h3>Phone</h3>
-                            <p><a href="tel:+27211234567">(021) 123-4567</a></p>
+                            <p><a href="tel:+27211234567">(+27) 689112001</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -105,10 +106,13 @@
         <!-- ENQUIRY FORM -->
         <section class="enquiry-section">
             <div class="container">
-                <h2>Send Us a Message</h2>
+                <div class="section-header">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2>Send Us a Message</h2>
+                </div>
 
                 <!-- Contact Form -->
-                <form id="contactForm">
+                <form id="contactForm" novalidate>
                     <div class="form-group">
                         <label for="contactName">Your Name *</label>
                         <input type="text" id="contactName" name="contactName" required placeholder="e.g., Thandi Nkosi">
@@ -129,58 +133,66 @@
                         <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Send Enquiry
-                    </button>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Enquiry
+                        </button>
+                    </div>
 
                     <p class="form-note">* Required fields</p>
-                    <p class="form-note"><em>Note: Form validation will be added in Part 3.</em></p>
                 </form>
             </div>
         </section>
 
-        <!-- MAP PLACEHOLDER -->
+        <!-- INTERACTIVE MAP -->
         <section class="map-section">
             <div class="container">
-                <h2>Our Locations</h2>
-                <div class="map-placeholder">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <p><strong>Visit us at these locations:</strong></p>
-                    <ul>
-                        <li>📍 <strong>Philippi Hub</strong> – 123 Main Rd, Philippi, 7785</li>
-                        <li>📍 <strong>Khayelitsha Satellite</strong> – 45 Mandela Ave, Khayelitsha, 7784</li>
-                        <li>📍 <strong>Mitchells Plain Satellite</strong> – 78 Second Ave, Mitchells Plain, 7785</li>
-                    </ul>
-                    <p class="map-note"><em>Interactive map will be added in Part 3.</em></p>
+                <div class="section-header">
+                    <span class="section-tag">Find Us</span>
+                    <h2>Our Locations</h2>
+                    <p>Tap a pin to see hours, contact details, and get directions.</p>
                 </div>
+                <div id="leafletMap" class="map-container" role="application" aria-label="Map of Haven Community Food Bank distribution locations"></div>
             </div>
         </section>
 
         <!-- LOCATION CARDS -->
         <section class="locations">
             <div class="container">
-                <h2>Find Us</h2>
+                <div class="section-header">
+                    <span class="section-tag">Details</span>
+                    <h2>Distribution Points</h2>
+                </div>
                 <div class="location-grid">
                     <article class="location-card">
                         <i class="fas fa-map-marker-alt location-icon"></i>
                         <h3>Philippi Hub</h3>
                         <p><strong>Address:</strong> 123 Main Rd, Philippi, 7785</p>
                         <p><strong>Hours:</strong> Mon, Wed, Sat (10am-2pm)</p>
-                        <p><strong>Contact:</strong> Nomsa (021) 123-4567</p>
+                        <p><strong>Contact:</strong> Nomsa (+27) 689112001</p>
+                        <a class="btn btn-small" href="https://www.google.com/maps/search/?api=1&query=24%20Old%20Lansdowne%20Road%2C%20Philippi%2C%207781" target="_blank" rel="noopener">
+                            <i class="fas fa-directions"></i> Directions
+                        </a>
                     </article>
                     <article class="location-card">
                         <i class="fas fa-map-marker-alt location-icon"></i>
                         <h3>Khayelitsha Satellite</h3>
                         <p><strong>Address:</strong> 45 Mandela Ave, Khayelitsha, 7784</p>
                         <p><strong>Hours:</strong> Tue, Fri (11am-3pm)</p>
-                        <p><strong>Contact:</strong> Peter (021) 123-4568</p>
+                        <p><strong>Contact:</strong> Peter (+27) 82334455</p>
+                        <a class="btn btn-small" href="https://www.google.com/maps/search/?api=1&query=45%20Mandela%20Ave%2C%20Khayelitsha%2C%207784" target="_blank" rel="noopener">
+                            <i class="fas fa-directions"></i> Directions
+                        </a>
                     </article>
                     <article class="location-card">
                         <i class="fas fa-map-marker-alt location-icon"></i>
                         <h3>Mitchells Plain Satellite</h3>
                         <p><strong>Address:</strong> 78 Second Ave, Mitchells Plain, 7785</p>
                         <p><strong>Hours:</strong> Wed, Thu (9am-1pm)</p>
-                        <p><strong>Contact:</strong> Thandi (021) 123-4569</p>
+                        <p><strong>Contact:</strong> Thandi (+27) 123-4569</p>
+                        <a class="btn btn-small" href="https://www.google.com/maps/search/?api=1&query=78%20Second%20Ave%2C%20Mitchells%20Plain%2C%207785" target="_blank" rel="noopener">
+                            <i class="fas fa-directions"></i> Directions
+                        </a>
                     </article>
                 </div>
             </div>
@@ -189,7 +201,10 @@
         <!-- SOCIAL MEDIA LINKS -->
         <section class="social-section">
             <div class="container">
-                <h2>Connect With Us</h2>
+                <div class="section-header">
+                    <span class="section-tag">Stay Connected</span>
+                    <h2>Connect With Us</h2>
+                </div>
                 <div class="social-icons">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -229,7 +244,7 @@
                     <h4>Contact Us</h4>
                     <ul class="contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> 123 Main Rd, Philippi, 7785</li>
-                        <li><i class="fas fa-phone"></i> (021) 123-4567</li>
+                        <li><i class="fas fa-phone"></i> (+27) 12 345 6789</li>
                         <li><i class="fas fa-envelope"></i> info@havenfoodbank.org</li>
                     </ul>
                 </div>
@@ -248,5 +263,9 @@
         </div>
     </footer>
 
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

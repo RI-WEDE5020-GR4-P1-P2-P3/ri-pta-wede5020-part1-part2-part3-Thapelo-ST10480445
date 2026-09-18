@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <!-- HEADER:Navigation Menu-->
+    <!-- HEADER: Navigation Menu -->
     <header>
         <div class="container">
             <div class="logo">
@@ -25,7 +25,7 @@
                         <text x="50" y="62" font-family="Montserrat, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">FOOD</text>
                         <text x="50" y="78" font-family="Montserrat, sans-serif" font-size="8" font-weight="400" fill="#7FFFD4" text-anchor="middle" opacity="0.7">BANK</text>
                         <circle cx="72" cy="22" r="8" fill="#40E0D0" opacity="0.3"/>
-                        <text x="72" y="27" font-size="10" text-anchor="middle"></text>
+                        <text x="72" y="27" font-size="10" text-anchor="middle">🍲</text>
                     </svg>
                     <div class="logo-text">
                         <span class="logo-title">Haven</span>
@@ -46,7 +46,7 @@
                 <a href="contact.html" class="btn-donate">
                     <i class="fas fa-heart"></i> <span>Donate</span>
                 </a>
-                <button class="menu-toggle" aria-label="Toggle Navigation">
+                <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -56,11 +56,11 @@
     <!-- MAIN CONTENT -->
     <main>
 
-        
-        <section class="hero" style="background: linear-gradient(rgba(26,37,47,0.65), rgba(26,37,47,0.75)), url('https://images.pexels.com/photos/6646878/pexels-photo-6646878.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <!-- HERO -->
+        <section class="hero" style="background: linear-gradient(rgba(27,26,46,0.65), rgba(27,26,46,0.8)), url('https://images.pexels.com/photos/6646878/pexels-photo-6646878.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; background-attachment: fixed;">
             <div class="hero-overlay">
                 <div class="hero-content">
-                    <div class="hero-badge"> Since 2015</div>
+                    <div class="hero-badge">Since 2015</div>
                     <h1>Nourishing Our <span class="highlight">Neighbours</span></h1>
                     <p class="hero-subtitle">Empowering communities through dignity, compassion, and sustainable food access.</p>
                     <div class="hero-stats-mini">
@@ -130,44 +130,42 @@
             </div>
         </section>
 
-       
-
-<!--FEATURED SECTION--->
-
-<section class="featured">
-    <div class="container">
-        <div class="featured-grid">
-            <div class="featured-image">
-                <img src="https://images.pexels.com/photos/5444633/pexels-photo-5444633.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Fresh vegetables arranged for a community food programme">
-            </div>
-            <div class="featured-content">
-                <span class="section-tag">Who We Are</span>
-                <h2>More Than a <span class="highlight">Food Bank</span></h2>
-                <p>Haven Community Food Bank was founded in 2015 in Cape Town with a simple mission: to ensure no one in our community goes to bed hungry. What started as a small weekend soup kitchen has grown into a network of support serving hundreds of families each month.</p>
-                <div class="featured-points">
-                    <div class="point">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Registered NPO serving Cape Town</span>
+        <!-- FEATURED SECTION -->
+        <section class="featured">
+            <div class="container">
+                <div class="featured-grid">
+                    <div class="featured-image">
+                        <img src="https://images.pexels.com/photos/5444633/pexels-photo-5444633.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Fresh vegetables arranged for a community food programme">
                     </div>
-                    <div class="point">
-                        <i class="fas fa-check-circle"></i>
-                        <span>400+ families supported monthly</span>
-                    </div>
-                    <div class="point">
-                        <i class="fas fa-check-circle"></i>
-                        <span>10+ distribution locations</span>
-                    </div>
-                    <div class="point">
-                        <i class="fas fa-check-circle"></i>
-                        <span>50+ dedicated volunteers</span>
+                    <div class="featured-content">
+                        <span class="section-tag">Who We Are</span>
+                        <h2>More Than a <span class="highlight">Food Bank</span></h2>
+                        <p>Haven Community Food Bank was founded in 2015 in Cape Town with a simple mission: to ensure no one in our community goes to bed hungry. What started as a small weekend soup kitchen has grown into a network of support serving hundreds of families each month.</p>
+                        <div class="featured-points">
+                            <div class="point">
+                                <i class="fas fa-check"></i>
+                                <span>Registered NPO serving Cape Town</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-check"></i>
+                                <span>400+ families supported monthly</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-check"></i>
+                                <span>10+ distribution locations</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-check"></i>
+                                <span>50+ dedicated volunteers</span>
+                            </div>
+                        </div>
+                        <a href="about.html" class="btn btn-primary">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <a href="about.html" class="btn btn-primary">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
-        </div>
-    </div>
-</section>
-        <!-- UPCOMING DISTRIBUTIONS-->
+        </section>
+
+        <!-- UPCOMING DISTRIBUTIONS -->
         <section class="upcoming-events">
             <div class="container">
                 <div class="section-header">
@@ -179,10 +177,10 @@
                     <article class="event-card">
                         <div class="event-icon"><i class="fas fa-flag-checkered"></i></div>
                         <div class="event-content">
-                            <h3> Philippi Hub</h3>
+                            <h3>Philippi Hub</h3>
                             <div class="event-meta">
                                 <span><i class="fas fa-calendar-day"></i> Monday</span>
-                                <span><i class="fas fa-clock"></i> 10am  2pm</span>
+                                <span><i class="fas fa-clock"></i> 10am – 2pm</span>
                             </div>
                             <p><i class="fas fa-map-marker-alt"></i> 123 Main Rd, Philippi, 7785</p>
                             <a href="services.html" class="btn btn-small">View Details <i class="fas fa-arrow-right"></i></a>
@@ -191,10 +189,10 @@
                     <article class="event-card">
                         <div class="event-icon"><i class="fas fa-flag-checkered"></i></div>
                         <div class="event-content">
-                            <h3> Khayelitsha</h3>
+                            <h3>Khayelitsha</h3>
                             <div class="event-meta">
                                 <span><i class="fas fa-calendar-day"></i> Tuesday</span>
-                                <span><i class="fas fa-clock"></i> 11am  3pm</span>
+                                <span><i class="fas fa-clock"></i> 11am – 3pm</span>
                             </div>
                             <p><i class="fas fa-map-marker-alt"></i> 45 Mandela Ave, Khayelitsha, 7784</p>
                             <a href="services.html" class="btn btn-small">View Details <i class="fas fa-arrow-right"></i></a>
@@ -203,10 +201,10 @@
                     <article class="event-card">
                         <div class="event-icon"><i class="fas fa-flag-checkered"></i></div>
                         <div class="event-content">
-                            <h3> Mitchells Plain</h3>
+                            <h3>Mitchells Plain</h3>
                             <div class="event-meta">
                                 <span><i class="fas fa-calendar-day"></i> Wednesday</span>
-                                <span><i class="fas fa-clock"></i> 9am  1pm</span>
+                                <span><i class="fas fa-clock"></i> 9am – 1pm</span>
                             </div>
                             <p><i class="fas fa-map-marker-alt"></i> 78 Second Ave, Mitchells Plain, 7785</p>
                             <a href="services.html" class="btn btn-small">View Details <i class="fas fa-arrow-right"></i></a>
@@ -216,16 +214,16 @@
             </div>
         </section>
 
-        <!-- VOLUNTEER SPOTLIGHT-->
-        <section class="spotlight" style="background: linear-gradient(135deg, #1A252F, #0D1419), url('https://images.pexels.com/photos/6995247/pexels-photo-6995247.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+        <!-- VOLUNTEER SPOTLIGHT -->
+        <section class="spotlight" style="background: linear-gradient(135deg, #1B1A2E, #2E2B5F), url('https://images.pexels.com/photos/6995247/pexels-photo-6995247.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; background-position: center; background-blend-mode: overlay;">
             <div class="spotlight-overlay">
                 <div class="container">
                     <div class="spotlight-content">
-                        <span class="section-tag" style="color:#40E0D0; border-color:#40E0D0;">Join Us</span>
+                        <span class="section-tag">Join Us</span>
                         <h2>Be the <span class="highlight">Change</span></h2>
                         <blockquote>
                             <p>"Volunteering at Haven is the best decision I made. I've met amazing people and made a real impact in my community."</p>
-                            <cite> Sarah M., Volunteer since 2024</cite>
+                            <cite>Sarah M., Volunteer since 2024</cite>
                         </blockquote>
                         <a href="enquiry.html" class="btn btn-primary">
                             <i class="fas fa-hands-helping"></i> Join Our Team
@@ -299,7 +297,7 @@
 
     </main>
 
-    <!--FOOTER-->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -346,5 +344,8 @@
         </div>
     </footer>
 
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -14,9 +14,7 @@
 </head>
 <body>
 
-    
-    <!-- HEADER: Navigation Menu   -->
-    
+    <!-- HEADER: Navigation Menu -->
     <header>
         <div class="container">
             <div class="logo">
@@ -27,7 +25,7 @@
                         <text x="50" y="62" font-family="Montserrat, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">FOOD</text>
                         <text x="50" y="78" font-family="Montserrat, sans-serif" font-size="8" font-weight="400" fill="#7FFFD4" text-anchor="middle" opacity="0.7">BANK</text>
                         <circle cx="72" cy="22" r="8" fill="#40E0D0" opacity="0.3"/>
-                        <text x="72" y="27" font-size="10" text-anchor="middle"></text>
+                        <text x="72" y="27" font-size="10" text-anchor="middle">🍲</text>
                     </svg>
                     <div class="logo-text">
                         <span class="logo-title">Haven</span>
@@ -48,91 +46,93 @@
                 <a href="contact.html" class="btn-donate">
                     <i class="fas fa-heart"></i> <span>Donate</span>
                 </a>
-                <button class="menu-toggle" aria-label="Toggle Navigation">
+                <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- MAIN CONTENT   -->
-    
+    <!-- MAIN CONTENT -->
     <main>
 
-     
-        
-        <section class="page-header" style="background: linear-gradient(rgba(26,37,47,0.7), rgba(26,37,47,0.8)), url('https://images.pexels.com/photos/6646960/pexels-photo-6646960.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;">
+        <!-- PAGE HEADER -->
+        <section class="page-header" style="background: linear-gradient(rgba(27,26,46,0.7), rgba(46,43,95,0.82)), url('https://images.pexels.com/photos/6647037/pexels-photo-6647037.jpeg?auto=compress&cs=tinysrgb&w=600'); background-size: cover; background-position: center;">
             <div class="container">
-                <h1>Find Food Near You</h1>
-                <p>We're here to help. Access nutritious food with dignity.</p>
+                <h1>Get Help</h1>
+                <p>Food assistance is available to anyone who needs it — no judgement, just support</p>
             </div>
         </section>
 
-        
-        <!-- ELIGIBILITY INFORMATION   -->
-        
+        <!-- ELIGIBILITY -->
         <section class="eligibility">
-            <div class="container">
-                <h2>Who Can Receive Food Assistance?</h2>
-                <p>Haven Community Food Bank serves the following community members:</p>
-                <ul>
-                    <li>Low-income families</li>
-                    <li>Elderly residents (65+)</li>
-                    <li>Persons with disabilities</li>
-                    <li>Unemployed individuals</li>
-                </ul>
-                <div class="notice">
-                    <p><strong>⚠️ Please bring an ID document for registration.</strong></p>
-                    <p>No appointment is needed. Just visit during distribution hours.</p>
+            <div class="container eligibility-list">
+                <div class="section-header">
+                    <span class="section-tag">Who We Help</span>
+                    <h2>Eligibility</h2>
+                    <p>Haven exists for anyone in our community facing food insecurity. There's no complicated application process — just come to a distribution point during open hours.</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-id-card"></i>
+                        <h3>Bring ID</h3>
+                        <p>A South African ID or any form of identification for the household member collecting</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-home"></i>
+                        <h3>Proof of Address</h3>
+                        <p>Any recent document showing where you live (a utility bill, lease, or letter is fine)</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Household Size</h3>
+                        <p>Let our team know how many people are in your household so parcels are sized fairly</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>No Judgement</h3>
+                        <p>First-time visitor or long-time neighbour — everyone is welcomed with dignity</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        
-        <!-- DISTRIBUTION SCHEDULE  -->
-     
+        <!-- DISTRIBUTION SCHEDULE -->
         <section class="schedule">
             <div class="container">
-                <h2>Weekly Distribution Schedule</h2>
-                <div class="table-responsive">
-                    <table>
+                <div class="section-header">
+                    <span class="section-tag">Plan Your Visit</span>
+                    <h2>Distribution Schedule</h2>
+                    <p>Food parcels and hot meals are distributed on a rotating schedule across our three locations.</p>
+                </div>
+                <div style="overflow-x:auto;">
+                    <table class="schedule-table">
                         <thead>
                             <tr>
-                                <th>Day</th>
-                                <th>Time</th>
                                 <th>Location</th>
+                                <th>Days</th>
+                                <th>Time</th>
+                                <th>Address</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Monday</strong></td>
-                                <td>10am – 2pm</td>
                                 <td>Philippi Hub</td>
+                                <td>Mon, Wed, Sat</td>
+                                <td>10am – 2pm</td>
+                                <td>123 Main Rd, Philippi, 7785</td>
                             </tr>
                             <tr>
-                                <td><strong>Tuesday</strong></td>
+                                <td>Khayelitsha Satellite</td>
+                                <td>Tue, Fri</td>
                                 <td>11am – 3pm</td>
-                                <td>Khayelitsha</td>
+                                <td>45 Mandela Ave, Khayelitsha, 7784</td>
                             </tr>
                             <tr>
-                                <td><strong>Wednesday</strong></td>
+                                <td>Mitchells Plain Satellite</td>
+                                <td>Wed, Thu</td>
                                 <td>9am – 1pm</td>
-                                <td>Mitchells Plain</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Thursday</strong></td>
-                                <td>12pm – 4pm</td>
-                                <td>Philippi Hub</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Friday</strong></td>
-                                <td>10am – 2pm</td>
-                                <td>Khayelitsha</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Saturday</strong></td>
-                                <td>8am – 12pm</td>
-                                <td>Philippi Hub</td>
+                                <td>78 Second Ave, Mitchells Plain, 7785</td>
                             </tr>
                         </tbody>
                     </table>
@@ -140,15 +140,15 @@
             </div>
         </section>
 
-       
-        <!-- LOCATION CARDS                                               -->
-        
+        <!-- LOCATIONS -->
         <section class="locations">
             <div class="container">
-                <h2>Distribution Locations</h2>
+                <div class="section-header">
+                    <span class="section-tag">Where We Are</span>
+                    <h2>Our Locations</h2>
+                </div>
                 <div class="location-grid">
                     <article class="location-card">
-                        <img src="https://images.pexels.com/photos/1462947/pexels-photo-1462947.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Philippi Hub - Community food distribution centre" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:15px;">
                         <i class="fas fa-map-marker-alt location-icon"></i>
                         <h3>Philippi Hub</h3>
                         <p><strong>Address:</strong> 123 Main Rd, Philippi, 7785</p>
@@ -156,7 +156,6 @@
                         <p><strong>Contact:</strong> Nomsa (021) 123-4567</p>
                     </article>
                     <article class="location-card">
-                        <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Khayelitsha Satellite - Community food distribution centre" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:15px;">
                         <i class="fas fa-map-marker-alt location-icon"></i>
                         <h3>Khayelitsha Satellite</h3>
                         <p><strong>Address:</strong> 45 Mandela Ave, Khayelitsha, 7784</p>
@@ -164,7 +163,6 @@
                         <p><strong>Contact:</strong> Peter (021) 123-4568</p>
                     </article>
                     <article class="location-card">
-                        <img src="https://images.pexels.com/photos/1462947/pexels-photo-1462947.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mitchells Plain Satellite - Community food distribution centre" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:15px;">
                         <i class="fas fa-map-marker-alt location-icon"></i>
                         <h3>Mitchells Plain Satellite</h3>
                         <p><strong>Address:</strong> 78 Second Ave, Mitchells Plain, 7785</p>
@@ -172,60 +170,45 @@
                         <p><strong>Contact:</strong> Thandi (021) 123-4569</p>
                     </article>
                 </div>
+                <p style="text-align:center; margin-top: 28px;">
+                    <a href="contact.html" class="btn btn-primary"><i class="fas fa-map-marked-alt"></i> View Interactive Map</a>
+                </p>
             </div>
         </section>
 
-        
-        <!-- MAP PLACEHOLDER (Interactive Map will be added in Part 3)   -->
-    
-        <section class="map-section">
-            <div class="container">
-                <h2>Find Us on the Map</h2>
-                <div class="map-placeholder">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <p><strong>Distribution Locations:</strong></p>
-                    <ul>
-                        <li> Philippi Hub – 123 Main Rd, Philippi, 7785</li>
-                        <li> Khayelitsha – 45 Mandela Ave, Khayelitsha, 7784</li>
-                        <li> Mitchells Plain – 78 Second Ave, Mitchells Plain, 7785</li>
-                    </ul>
-                    <p class="map-note"><em>Interactive map will be added in Part 3.</em></p>
-                </div>
-            </div>
-        </section>
-
-      
-        <!-- FREQUENTLY ASKED QUESTIONS   -->
-       
+        <!-- FAQ -->
         <section class="faq">
-            <div class="container">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <h3>What should I bring?</h3>
-                        <p>Please bring your ID document for registration purposes.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Do I need an appointment?</h3>
-                        <p>No appointment is needed. Just visit during distribution hours.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Can I pick up for someone else?</h3>
-                        <p>Yes, please bring their ID document and a note of authorisation.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>What food items are available?</h3>
-                        <p>We provide nutritious groceries including fresh produce, non-perishable items, and hot meals.</p>
-                    </div>
+            <div class="container faq-list">
+                <div class="section-header">
+                    <span class="section-tag">Questions</span>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need to book in advance?</h3>
+                    <p>No booking is needed. Simply arrive at any distribution point during its open hours — see the schedule above.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How often can I collect a food parcel?</h3>
+                    <p>Households can collect one parcel per week from any single location during that location's open days.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What should I bring?</h3>
+                    <p>Please bring your ID (or the collecting household member's ID) and, if you have it, a proof of address. We'll help even without paperwork — just ask a volunteer.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I collect on behalf of someone else?</h3>
+                    <p>Yes. Bring your own ID along with the name of the household you're collecting for, and our team will assist you.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there support beyond food parcels?</h3>
+                    <p>Our Philippi hub also serves hot meals and can connect you with partner organisations for additional social support.</p>
                 </div>
             </div>
         </section>
 
     </main>
 
-
-    <!-- FOOTER      -->
-    
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -272,5 +255,8 @@
         </div>
     </footer>
 
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
